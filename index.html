@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<div>
+		<form action="AutoServlet.java">
+	<label>UserId:<input type="text" id="nam" name="userid"></label>
+	<label>Password:<input type="text" id="pas" name="password"></label>
+	<label><input type="button"  value="login" name="log"></label>
+    </div></form>
+    <script>
+		function verify(){
+			 var user = document.getElementById("nam").value;
+			 var pwd = document.getElementById("pas").value;
+			 xhr = new XMLHttpRequest();
+			 xhr.open('GET','MyFilter',true);
+			 xhr.setRequestHeader("user",user);
+			 xhr.setRequestHeader("pwd",pwd)
+			 xhr.send();
+			 
+			 }
+	</script>
+</body>
+</html>
